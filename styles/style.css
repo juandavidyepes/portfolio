@@ -1,0 +1,174 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: url('../images/icons8-mouse-cursor.png'), auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(245,245,245);
+    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(186,186,186,1) 100%);
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+}
+
+a, a i{
+    cursor: url('../images/icons8-hand-cursor-30.png'), auto;
+}
+
+
+/* Navbar */
+
+.navbar{
+    margin: 0 10%;
+    color: #F5F5F5;
+    background-color: #30475E;
+    font-family: 'Bebas Neue', cursive;
+    cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+}
+
+.navbar .navbar-brand{
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    transition: transform 0.4s ease;
+    margin: 0 1rem;
+    cursor: url('../images/icons8-hand-cursor-30-white.png'), auto;
+}
+
+.navbar .navbar-brand.top{
+    transform: scale(3) translate(40%, 12vh);
+}
+
+.navbar > .container-fluid{
+    justify-content: space-between;
+    cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+}
+
+.navbar .navbar-collapse{
+    font-size: 20px;
+    flex-grow: 0;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-collapse .nav-link{
+    font-family: 'Bebas Neue', cursive;
+    cursor: url('../images/icons8-hand-cursor-30-white.png'), auto;
+}
+
+.navbar .navbar-collapse .nav-link:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+    color: #F05454 !important;
+}
+
+/* Page Sections */
+
+.page-sections{
+    width: 90%;
+    height: fit-content;
+    margin: 71px auto;
+}
+
+.page-sections p{
+    color: #30475E;
+}
+
+
+
+
+/* Home */
+
+#home{
+    background: #30475E;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: -142px; 
+    cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15%;
+}
+
+#home h1,#home h4{
+    color: #F5F5F5;
+    font-family: 'Bebas Neue', cursive;
+    cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+}
+
+
+/* Projects */
+
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.project{
+    margin: 0 50px 100px;
+} 
+
+.project-name{
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    width: max-content;
+}
+
+.project-technologies{
+    text-align: center;  
+}
+
+.project-technologies i{
+    margin: 0 0.5rem;
+    color: #30475E;
+}
+
+.project-img-link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img-link-container img{
+    transition: filter 0.42s ease;
+}
+
+.project-img-link-container:hover img{
+    filter: blur(10px) opacity(50%);
+}
+
+.project-img-link-container:hover .description-link-container{
+    opacity: 1;
+}
+
+.description-link-container{
+    position: absolute;
+    z-index: +1;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: OPACITY 0.42s ease;
+}
+
+.description-link-container p{
+    text-align: center;
+    color: #30475E;
+}
+
+.project-img-link-container .project-link i{
+    color: #F05454;
+}
