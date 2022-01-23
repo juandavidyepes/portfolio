@@ -2,7 +2,7 @@ let projectsData = [
     {
         id: 1,
         name: 'Gifos',
-        imageUrl: '../images/gifos.png',
+        imageUrl: './images/gifos.png',
         link: 'https://juandavidyepes.github.io/gifos/',
         technologies: 'js - css - html',
         description: 'Webapp that let you search, save and create gifs from Giphy API'
@@ -10,7 +10,7 @@ let projectsData = [
     {
         id: 2,
         name: 'Weather App',
-        imageUrl: '../images/weather.png',
+        imageUrl: './images/weather.png',
         link: 'https://gradi-weather.netlify.app/',
         technologies: 'react - js -css - html',
         description: 'Webapp for real time weather information from OpenWeather API'
@@ -18,7 +18,7 @@ let projectsData = [
     {
         id: 3,
         name: 'Podcast Channel Landing Page',
-        imageUrl: '../images/podcast.png',
+        imageUrl: './images/podcast.png',
         link: 'https://juandavidyepes.github.io/podcast-channel/',
         technologies: 'css - html',
         description: 'Landing page for a podcast'
@@ -26,7 +26,7 @@ let projectsData = [
     {
         id: 4,
         name: 'Types of Hotels',
-        imageUrl: '../images/hotels.png',
+        imageUrl: './images/hotels.png',
         link: 'https://juandavidyepes.github.io/types-of-hotels/',
         technologies: 'js -css - html',
         description: 'Training website to learn types of hotels'
