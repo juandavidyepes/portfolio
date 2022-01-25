@@ -25,7 +25,7 @@ let projectsData = [
     },
     {
         id: 4,
-        name: 'Types of Hotels',
+        name: 'Types of Hotels Activity',
         imageUrl: './images/hotels.png',
         link: 'https://juandavidyepes.github.io/types-of-hotels/',
         technologies: 'js -css - html',

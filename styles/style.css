@@ -12,6 +12,7 @@ html {
 body{
     background: rgb(245,245,245);
     background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(186,186,186,1) 100%);
+    overflow-x: hidden;
 }
 
 h2{
@@ -21,6 +22,28 @@ h2{
 a, a i{
     cursor: url('../images/icons8-hand-cursor-30.png'), auto;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #999999 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(186,186,186,1);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 10px;
+    border: 1px solid rgba(186,186,186,1);
+  }
 
 
 /* Navbar */
@@ -34,16 +57,17 @@ a, a i{
 }
 
 .navbar .navbar-brand{
-    font-size: 30px;
+    font-size: 2rem;
     font-family: 'Bebas Neue', cursive;
     position: relative;
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
     margin: 0 1rem;
     cursor: url('../images/icons8-hand-cursor-30-white.png'), auto;
 }
 
 .navbar .navbar-brand.top{
-    transform: scale(3) translate(40%, 12vh);
+    transform: translate(2.5%, 33vh);
+    font-size: 5rem;
 }
 
 .navbar > .container-fluid{
@@ -90,19 +114,37 @@ a, a i{
     background: #30475E;
     width: 100%;
     height: 100vh;
+    padding: 0 12%;
     position: relative;
-    top: -142px; 
+    top: -146px; 
     cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 15%;
+    justify-content: space-between;
+    align-items: center;
+     margin: 0 auto 71px;
 }
 
 #home h1,#home h4{
     color: #F5F5F5;
     font-family: 'Bebas Neue', cursive;
     cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+}
+
+.myphoto{
+    width: 45%;
+    max-width: 450px;
+    margin: 0 5%;
+    position: relative;
+    left: 70%;
+    transition: all 1s ease;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.myphoto.top{
+    left: 0;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 
@@ -117,6 +159,15 @@ a, a i{
 
 .project{
     margin: 0 50px 100px;
+    opacity: 0;
+    position: relative;
+    left: -20%;
+    transition: all 2s ease;
+} 
+
+.project.show{
+    opacity: 1;
+    left: 0%;
 } 
 
 .project-name{
@@ -128,6 +179,7 @@ a, a i{
 
 .project-technologies{
     text-align: center;  
+    width: 10%;
 }
 
 .project-technologies i{
@@ -139,34 +191,52 @@ a, a i{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 500px;
+    height: 300px;
 }
 
 .project-img-link-container img{
-    transition: filter 0.42s ease;
+    width: 450px;
+    height: 300px;
+    transform: scale(0.95);
+    transition: all 0.4s ease;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
 }
 
-.project-img-link-container:hover img{
-    filter: blur(10px) opacity(50%);
+
+.project-img-link-container:hover img, 
+.project-img-link-container:hover .description-link-container {
+    transform: scale(1);
 }
 
 .project-img-link-container:hover .description-link-container{
-    opacity: 1;
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0);
 }
 
 .description-link-container{
     position: absolute;
     z-index: +1;
-    width: 400px;
+    width: 90.1%;
+    height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: OPACITY 0.42s ease;
+    transition: all 0.4s ease;
+    background-color: #F5F5F5;
+    bottom: -1px;
+    right: 0;
+    padding: 5%;
+    clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+    transform: scale(0.95);
 }
 
 .description-link-container p{
     text-align: center;
     color: #30475E;
+    font-size: 1.2rem;
 }
 
 .project-img-link-container .project-link i{
