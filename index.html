@@ -17,25 +17,28 @@
 </head>
 
 <body>
+    <div class="loader-container">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand top" href="">Juan David Yepes
-
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#aboutme">About Me</a>
-                    <a class="nav-link" href="#projects">Projects</a>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </div>
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#aboutme">About Me</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
         </div>
+        <a class="navbar-brand top" href="">Juan David Yepes
+    
+        </a>
+    </div>
     </nav>
 
     <section class="page-sections" id="home">
@@ -46,11 +49,45 @@
         <img src="./images/photo.png" alt="" class="myphoto">
     </section>
     <section class="page-sections" id="aboutme">
+        <h1> About me </h1>
+        <p>
+            Hi, my name is Juan David and I work as a frontend developer since April 2021. <br><br>
+            
+            I am always willing to learn new technologies and methodologies from my professional experience 
+            and personal studies, all this helps me adapt with ease to a team and have great results. <br><br>
+
+            Experience with JavaScript, jQuery, HTML, and CSS. Plus knowledge in personal projects in React, Vue.js, 
+            Backend with Nodejs and good practices such as accesibility, SEO, POO.
+        </p>
     </section>
     <section class="page-sections projects" id="projects">
         <div id="root-projects"></div>
     </section>
     <section class="page-sections" id="contact">
+        <h1> Contact </h1>
+        <ul>
+            <li>
+                <i class="fa-thin fa-0"></i>
+                <p>judavidy@hotmail.com</p>
+            </li>
+            <li>
+                <i class="fa-solid fa-square-phone"></i>
+                <p>+57 315 313 1058</p>
+            </li>
+            <li>
+                <i class="fa-solid fa-square-phone"></i>
+                <a href="https://www.linkedin.com/in/juandyepes/" target="_blank"><p>LinkedIn</p></a>
+            </li>
+            <li>
+                <i class="fa-solid fa-square-phone"></i>
+                <a href="https://github.com/juandavidyepes" target="_blank"><p>GitHub</p></a>
+            </li>
+            <li>
+                <i class="fa-solid fa-square-phone"></i>
+                <p>Bogotá, Colombia</p>
+            </li>
+        </ul>
+
     </section>
 
 
@@ -66,6 +103,8 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/196bba3b65.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="./scripts/index.js"></script>
     <script src="./components/data.js" type="text/babel"></script>

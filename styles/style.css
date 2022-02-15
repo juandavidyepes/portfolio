@@ -13,6 +13,7 @@ body{
     background: rgb(245,245,245);
     background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(186,186,186,1) 100%);
     overflow-x: hidden;
+    background-color: #30475E;
 }
 
 h2{
@@ -22,6 +23,99 @@ h2{
 a, a i{
     cursor: url('../images/icons8-hand-cursor-30.png'), auto;
 }
+
+/* Loader */
+
+.loader-container{
+    position: absolute;
+    background: rgb(245,245,245);
+    background: linear-gradient(135deg, rgba(245,245,245,1) 0%, rgba(245,235,235,1) 19%, rgba(240,84,84,1) 19%, rgba(236,84,84,1) 80%, rgba(48,71,94,1) 80%);
+    width: 100vw;
+    height: 100vh;
+    z-index: +30;
+    display: grid;
+    place-items: center;
+}
+
+.lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
@@ -54,29 +148,33 @@ a, a i{
     background-color: #30475E;
     font-family: 'Bebas Neue', cursive;
     cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+    z-index: +15 !important;
 }
 
 .navbar .navbar-brand{
     font-size: 2rem;
     font-family: 'Bebas Neue', cursive;
-    position: relative;
     transition: all 0.4s ease;
     margin: 0 1rem;
+    position: absolute;
     cursor: url('../images/icons8-hand-cursor-30-white.png'), auto;
+    left: 0;
+    top: 0;
 }
 
 .navbar .navbar-brand.top{
-    transform: translate(2.5%, 33vh);
-    font-size: 5rem;
+    transform: translate(-1rem, 30vh);
+    font-size: 5rem;  
 }
 
 .navbar > .container-fluid{
     justify-content: space-between;
     cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
+    flex-direction: row-reverse;
 }
 
 .navbar .navbar-collapse{
-    font-size: 20px;
+    font-size: 30px;
     flex-grow: 0;
     font-family: 'Bebas Neue', cursive;
     margin: 0 1rem;
@@ -88,7 +186,7 @@ a, a i{
 }
 
 .navbar .navbar-collapse .nav-link:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     transition: all 0.2s;
     color: #F05454 !important;
 }
@@ -105,23 +203,22 @@ a, a i{
     color: #30475E;
 }
 
-
-
-
 /* Home */
 
 #home{
     background: #30475E;
     width: 100%;
-    height: 100vh;
-    padding: 0 12%;
+    height: 110vh;
+    padding: 0 10%;
     position: relative;
     top: -146px; 
     cursor: url('../images/icons8-mouse-cursor-pointer-white.png'), auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-     margin: 0 auto 71px;
+    flex-wrap: wrap;
+    margin: 0 auto 71px;
+    overflow: hidden;
 }
 
 #home h1,#home h4{
@@ -132,6 +229,7 @@ a, a i{
 
 .myphoto{
     width: 45%;
+    min-width: 200px;
     max-width: 450px;
     margin: 0 5%;
     position: relative;
@@ -149,6 +247,10 @@ a, a i{
 
 
 /* Projects */
+
+#projects.page-sections{
+    padding: 7% 0 0;
+}
 
 .projects-container{
     display: flex;
@@ -192,13 +294,17 @@ a, a i{
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 500px;
-    height: 300px;
+    max-width: 500px;
+    max-height: 300px;
+    width: 60vw;
+    height: auto;
+    margin: 0 auto;
 }
 
 .project-img-link-container img{
-    width: 450px;
-    height: 300px;
+    max-width: 450px;
+    width: 60vw;
+    height: auto;
     transform: scale(0.95);
     transition: all 0.4s ease;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
@@ -226,7 +332,7 @@ a, a i{
     align-items: center;
     transition: all 0.4s ease;
     background-color: #F5F5F5;
-    bottom: -1px;
+    bottom: -5%;
     right: 0;
     padding: 5%;
     clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
@@ -241,4 +347,88 @@ a, a i{
 
 .project-img-link-container .project-link i{
     color: #F05454;
+}
+
+/* About & Contact */
+
+#aboutme.page-sections,#contact.page-sections{
+    max-width: 700px;
+    padding: 200px 0;
+}
+
+#aboutme.page-sections h1,#contact.page-sections h1{
+    font-size: 3rem;
+}
+
+#aboutme.page-sections p,#contact.page-sections p{
+    font-size: 1.5rem;
+}
+
+#contact.page-sections a{
+    text-decoration: none;
+}
+
+#contact.page-sections a p:hover{
+    cursor: url('../images/icons8-hand-cursor-30.png'), auto !important;
+    color: #F05454 !important;
+}
+
+#contact.page-sections ul{
+    list-style-type: none;
+    background-color: #30475E;
+    padding: 5%;
+}
+
+#contact.page-sections ul li{
+    border-bottom: 1px solid #F5F5F5;
+}
+
+#contact.page-sections ul p{
+    color: #F5F5F5;
+    margin: 2% 0;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .navbar .navbar-collapse{
+    font-size: 20px;
+    flex-grow: 0;
+    font-family: 'Bebas Neue', cursive;
+    margin: 0 1rem;
+  }
+ 
+  .navbar .navbar-brand.top{
+    font-size: 3rem; 
+    transform: translate(-1rem, 10vh);
+  }
+
+  #home{
+    padding: 60% 10% ;
+    height: 115vh;
+    margin: 0 auto;
+  }
+
+  .myphoto{
+    justify-self: center;
+  }
+
+  
+  #aboutme.page-sections,#contact.page-sections{
+    max-width: 700px;
+    padding: 50px 0;
+  }
+
+    
+  #aboutme.page-sections h1,#contact.page-sections h1{
+    font-size: 2rem;
+  }
+
+  #aboutme.page-sections p,#contact.page-sections p{
+    font-size: 1rem;
+  }
+
+  #aboutme, #contact{
+    margin: 0 auto;
+  }
+
 }

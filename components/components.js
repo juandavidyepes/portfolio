@@ -16,7 +16,6 @@ class Project extends React.Component {
 
     componentDidMount() {
         let currentProject = this.project.current
-        console.log(currentProject)
         window.addEventListener('scroll', function () {
             isInViewport(currentProject)
             if (isInViewport(currentProject)) {
