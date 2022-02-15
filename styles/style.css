@@ -431,4 +431,22 @@ a, a i{
     margin: 0 auto;
   }
 
+  .description-link-container {
+    flex-direction: row;
+    
+  }
+
+  .description-link-container p {
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+
+  .fa-sm {
+    font-size: .5em;
+  }
+
+  .project-img-link-container:hover img{
+    transform: scale(0.95);
+  }
+
 }
